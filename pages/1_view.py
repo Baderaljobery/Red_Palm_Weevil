@@ -79,14 +79,15 @@ st.markdown("""
 """, unsafe_allow_html=True)
 #-------------------------------------------------
 st.title("5- What was the growth rate in 2022 compared to the previous year?")
-st.dataframe(growth_2020_formatted.to_frame("Growth 2020 (%)"))
+growth_2020 = ((df["2020_inspection"] - df["2019_inspection"]) / df["2019_inspection"]) * 100
+growth_2020.index = df["Region"]
 
-st.markdown("### 📈 Growth Rate 2020 by Region")
+growth_2020_formatted = growth_2020.apply(lambda x: f"{x:.2f}%")
+
+# ============= Display =============
+st.subheader("📈 Growth Rate in 2020 by Region")
 
 st.dataframe(
     growth_2020_formatted.to_frame("Growth 2020 (%)"),
     use_container_width=True
 )
-
-sorted_growth = growth_2020_formatted.to_frame("Growth 2020 (%)").sort_values("Growth 2020 (%)", ascending=False)
-st.dataframe(sorted_growth)
