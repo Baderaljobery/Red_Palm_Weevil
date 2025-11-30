@@ -122,6 +122,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 #-------------------------------------------------
 st.title("7- What is the mean for the Riyadh region?")
+st.dataframe(Riyadh_mean.to_frame("Mean Value"), use_container_width=True)
 #-------------------------------------------------
 st.markdown("""
 <hr style="border: 2px solid #0a5c2d;">
