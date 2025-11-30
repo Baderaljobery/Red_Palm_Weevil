@@ -121,12 +121,11 @@ st.markdown("""
 <hr style="border: 2px solid #0a5c2d;">
 """, unsafe_allow_html=True)
 #-------------------------------------------------
-st.title("7- What is the mean for the Riyadh region?")
-Riyadh_row = df[df["Region"] == "Riyadh region"]
+st.title("7- What is the mean from 2019 - 2024 ?")
+st.subheader("📊 Mean of All Numeric Columns")
 
-# Compute mean of inspection columns
-Riyadh_mean = Riyadh_row.filter(like="inspection").mean()
-st.dataframe(Riyadh_mean.to_frame("Mean Value"), use_container_width=True)
+mean_df = df.mean(numeric_only=True).to_frame("Mean")
+st.dataframe(mean_df, use_container_width=True)
 #-------------------------------------------------
 st.markdown("""
 <hr style="border: 2px solid #0a5c2d;">
