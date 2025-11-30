@@ -124,9 +124,6 @@ st.markdown("""
 st.title("7- What is the mean from 2019 - 2024 ?")
 st.subheader("📊 Mean of All Numeric Columns")
 
-mean_df = df.mean(numeric_only=True).to_frame("Mean")
-st.dataframe(mean_df, use_container_width=True)
-
 inspection_cols = df.filter(like="inspection").columns
 inspection_mean = df[inspection_cols].mean()
 
@@ -138,3 +135,25 @@ st.markdown("""
 """, unsafe_allow_html=True)
 #-------------------------------------------------
 st.title("8- What is the relationship between the inspected, infected, and treated palm trees?")
+# ======= الرسم =======
+fig, ax = plt.subplots(figsize=(12, 7))
+
+sns.scatterplot(
+    data=df,
+    x="2024_inspection",
+    y="Infected_palm_2024",
+    size="Treated_palm_2024",
+    hue="Region",
+    sizes=(50, 800),
+    alpha=0.7,
+    ax=ax
+)
+
+ax.set_xlabel("Inspected Palms 2024")
+ax.set_ylabel("Infected Palms 2024")
+ax.set_title("Inspection vs Infection vs Treatment (2024) by Region")
+
+ax.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
+plt.tight_layout()
+
+st.pyplot(fig)
