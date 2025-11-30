@@ -23,6 +23,32 @@ plt.tight_layout()
 st.pyplot(fig)
 #-------------------------------------------------
 st.markdown("""<hr style="border: 2px solid #333;">""", unsafe_allow_html=True)
+
+st.markdown("""
+<hr style="border: 2px solid #0a5c2d;">
+""", unsafe_allow_html=True)
+
+st.markdown("""
+<div style='
+    width:100%;
+    text-align:center;
+    margin:25px 0;
+'>
+    <span style='font-size:30px;'>•••</span>
+</div>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+<div style="
+    height: 2px;
+    background-color: #ccc;
+    margin: 30px 0;
+"></div>
+""", unsafe_allow_html=True)
+
+st.markdown("---")
+
+
 #-------------------------------------------------
 st.title("2- How many palm trees were inspected in 2019 ?")
 total_2019 = df['2019_inspection'].sum()
