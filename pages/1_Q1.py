@@ -6,8 +6,8 @@ import seaborn as sns
 url = "https://raw.githubusercontent.com/Baderaljobery/Red_Palm_Weevil/refs/heads/main/dataset/finaldataset_Red_Palm_Weevil.csv"
 df = pd.read_csv(url)
 
-st.title("السؤال 1: [اكتب السؤال]")
-st.write("شرح بسيط…")
+st.title("Q1 is ......")
+st.write("sleep is goood")
 
 plt.figure(figsize=(10, 5))
 
