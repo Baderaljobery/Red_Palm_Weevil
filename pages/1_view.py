@@ -97,6 +97,9 @@ st.markdown("""
 """, unsafe_allow_html=True)
 #-------------------------------------------------
 st.title("6- What is the percentage of affected region in 2024?")
+infection_rate_2024_percent = (
+    df["Infected_palm_2024"] / df["2024_inspection"] * 100
+)
 fig, ax = plt.subplots(figsize=(10,7))
 
 sns.barplot(
@@ -110,8 +113,8 @@ sns.barplot(
 ax.set_xlabel("Infection Rate 2024 (%)")
 ax.set_ylabel("Region")
 ax.set_title("Palm Infection Rate by Region - 2024")
-plt.tight_layout()
 
+plt.tight_layout()
 st.pyplot(fig)
 #-------------------------------------------------
 st.markdown("""
