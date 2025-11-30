@@ -73,3 +73,20 @@ st.metric(
     value=f"{value:,}",
     delta=region
 )
+#-------------------------------------------------
+st.markdown("""
+<hr style="border: 2px solid #0a5c2d;">
+""", unsafe_allow_html=True)
+#-------------------------------------------------
+st.title("5- What was the growth rate in 2022 compared to the previous year?")
+st.dataframe(growth_2020_formatted.to_frame("Growth 2020 (%)"))
+
+st.markdown("### 📈 Growth Rate 2020 by Region")
+
+st.dataframe(
+    growth_2020_formatted.to_frame("Growth 2020 (%)"),
+    use_container_width=True
+)
+
+sorted_growth = growth_2020_formatted.to_frame("Growth 2020 (%)").sort_values("Growth 2020 (%)", ascending=False)
+st.dataframe(sorted_growth)
