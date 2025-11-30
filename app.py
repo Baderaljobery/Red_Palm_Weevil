@@ -12,13 +12,15 @@ st.markdown("""
     font-size:19px;
     line-height:1.9;
 ">
-    <h3>🌴 رمز المملكة العربية السعودية</h3>
+    <h3>🌴 Symbol of the Kingdom of Saudi Arabia</h3>
     <p>
-    ارتبطت النخلة بالإنسان منذ الأزل وكانت رفيقته في بناء الحضارة في مختلف البيئات التي تنمو فيها ولها مكانة عظيمة في الحياة الإجتماعية والإقتصادية والثقافية.
+    The palm tree has been closely connected to humans since ancient times, serving as a companion in building civilization across the various environments in which it grows.
+    It holds a significant place in social, economic, and cultural life.
     <br><br>
-    ويكفي فخرًا أنها رمز من رموز المملكة العربية السعودية 🇸🇦🌴
+    And it is a great honor that the palm tree stands as one of the prominent symbols of the Kingdom of Saudi Arabia 🇸🇦🌴
     </p>
 </div>
 """,
 unsafe_allow_html=True)
+
 
