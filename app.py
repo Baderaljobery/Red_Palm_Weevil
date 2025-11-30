@@ -28,7 +28,7 @@ unsafe_allow_html=True)
 st.title("📊 Palm Dataset Overview")
 
 # ------------ Load Data ------------
-url = "https://raw.githubusercontent.com/USERNAME/REPO/main//dataset/final_dataset.csv"
+url = "https://raw.githubusercontent.com/Baderaljobery/Red_Palm_Weevil/refs/heads/main/dataset/finaldataset_Red_Palm_Weevil.csv"
 df = pd.read_csv(url)
 
 # ------------ Show Dataset ------------
