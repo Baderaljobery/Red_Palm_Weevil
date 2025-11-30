@@ -10,12 +10,15 @@ st.title("Q1 is ......")
 st.write("sleep is goood")
 
 #1
-plt.figure(figsize=(10, 5))
-sns.barplot(data=df, x="Region", y="2024_inspection")
+fig, ax = plt.subplots(figsize=(10, 5))
 
-plt.xticks(rotation=45, ha="right")
-plt.title("Number of inspections in 2024")
-plt.xlabel("Region")
-plt.ylabel("Number of inspections in 2024")
+sns.barplot(data=df, x="Region", y="2024_inspection", ax=ax)
+
+ax.set_xticklabels(ax.get_xticklabels(), rotation=45, ha="right")
+ax.set_title("Number of inspections in 2024")
+ax.set_xlabel("Region")
+ax.set_ylabel("Number of inspections in 2024")
 plt.tight_layout()
-plt.show()
+
+st.pyplot(fig)
+
