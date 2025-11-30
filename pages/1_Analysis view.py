@@ -7,7 +7,7 @@ url = "https://raw.githubusercontent.com/Baderaljobery/Red_Palm_Weevil/refs/head
 df = pd.read_csv(url)
 
 st.title("1- What is the rate of region examined for the year 2024 ?")
-st.write("ok")
+st.write("")
 
 #1
 fig, ax = plt.subplots(figsize=(10, 5))
