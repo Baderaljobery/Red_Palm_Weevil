@@ -126,6 +126,12 @@ st.subheader("📊 Mean of All Numeric Columns")
 
 mean_df = df.mean(numeric_only=True).to_frame("Mean")
 st.dataframe(mean_df, use_container_width=True)
+
+inspection_cols = df.filter(like="inspection").columns
+inspection_mean = df[inspection_cols].mean()
+
+st.dataframe(inspection_mean.to_frame("Mean"), use_container_width=True)
+
 #-------------------------------------------------
 st.markdown("""
 <hr style="border: 2px solid #0a5c2d;">
