@@ -21,4 +21,11 @@ ax.set_ylabel("Number of inspections in 2024")
 plt.tight_layout()
 
 st.pyplot(fig)
+#-------------------------------------------------
+st.title("2- How many palm trees were inspected in 2019 ?")
+total_2019 = df['2019_inspection'].sum()
 
+st.metric(
+    label="Total Inspections in 2019",
+    value=f"{total_2019:,}"
+)
