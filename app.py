@@ -3,7 +3,7 @@ import pandas as pd
 
 st.set_page_config(page_title="Palm Dashboard", layout="wide")
 
-st.title("🌴 Palm Inspection Dashboard")
+st.title("🌴 Red Palm Weevil Dashboard")
 st.markdown("""
 <div style="
     background: linear-gradient(135deg, #0a4d26, #0e6833);
@@ -46,7 +46,7 @@ st.markdown("""
     text-align:center;
     color:#333;
 ">
-<b>🔎 Please select a question from the sidebar to view its visualization.</b>
+<b>🔎 Please click on the (Analysis View) box on the left to view the analysis..</b>
 </div>
 """, unsafe_allow_html=True)
 
