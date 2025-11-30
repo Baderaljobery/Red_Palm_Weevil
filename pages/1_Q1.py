@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-url = "https://raw.githubusercontent.com/USERNAME/REPO/main/data/dataset.csv"
+url = "https://raw.githubusercontent.com/Baderaljobery/Red_Palm_Weevil/refs/heads/main/dataset/finaldataset_Red_Palm_Weevil.csv"
 df = pd.read_csv(url)
 
 st.title("السؤال 1: [اكتب السؤال]")
