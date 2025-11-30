@@ -91,3 +91,37 @@ st.dataframe(
     growth_2020_formatted.to_frame("Growth 2020 (%)"),
     use_container_width=True
 )
+#-------------------------------------------------
+st.markdown("""
+<hr style="border: 2px solid #0a5c2d;">
+""", unsafe_allow_html=True)
+#-------------------------------------------------
+st.title("6- What is the percentage of affected region in 2024?")
+fig, ax = plt.subplots(figsize=(10,7))
+
+sns.barplot(
+    y="Region",
+    x=infection_rate_2024_percent,
+    data=df,
+    palette="Reds_r",
+    ax=ax
+)
+
+ax.set_xlabel("Infection Rate 2024 (%)")
+ax.set_ylabel("Region")
+ax.set_title("Palm Infection Rate by Region - 2024")
+plt.tight_layout()
+
+st.pyplot(fig)
+#-------------------------------------------------
+st.markdown("""
+<hr style="border: 2px solid #0a5c2d;">
+""", unsafe_allow_html=True)
+#-------------------------------------------------
+st.title("7- What is the mean for the Riyadh region?")
+#-------------------------------------------------
+st.markdown("""
+<hr style="border: 2px solid #0a5c2d;">
+""", unsafe_allow_html=True)
+#-------------------------------------------------
+st.title("8- What is the relationship between the inspected, infected, and treated palm trees?")
