@@ -22,6 +22,8 @@ plt.tight_layout()
 
 st.pyplot(fig)
 #-------------------------------------------------
+st.markdown("""<hr style="border: 2px solid #333;">""", unsafe_allow_html=True)
+#-------------------------------------------------
 st.title("2- How many palm trees were inspected in 2019 ?")
 total_2019 = df['2019_inspection'].sum()
 
