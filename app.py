@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 st.set_page_config(page_title="Palm Dashboard", layout="wide")
 
@@ -23,4 +24,29 @@ st.markdown("""
 """,
 unsafe_allow_html=True)
 
+
+st.title("📊 Palm Dataset Overview")
+
+# ------------ Load Data ------------
+url = "https://raw.githubusercontent.com/USERNAME/REPO/main//dataset/final_dataset.csv"
+df = pd.read_csv(url)
+
+# ------------ Show Dataset ------------
+st.subheader("📄 Dataset Preview")
+st.dataframe(df, use_container_width=True)
+
+# ------------ Instruction Box ------------
+st.markdown("""
+<br>
+<div style="
+    background-color:#f1f1f1;
+    padding:18px;
+    border-radius:12px;
+    font-size:18px;
+    text-align:center;
+    color:#333;
+">
+<b>🔎 Please select a question from the sidebar to view its visualization.</b>
+</div>
+""", unsafe_allow_html=True)
 
