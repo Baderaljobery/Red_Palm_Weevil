@@ -9,8 +9,8 @@ df = pd.read_csv(url)
 st.title("Q1 is ......")
 st.write("sleep is goood")
 
+#1
 plt.figure(figsize=(10, 5))
-
 sns.barplot(data=df, x="Region", y="2024_inspection")
 
 plt.xticks(rotation=45, ha="right")
