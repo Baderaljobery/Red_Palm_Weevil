@@ -122,6 +122,10 @@ st.markdown("""
 """, unsafe_allow_html=True)
 #-------------------------------------------------
 st.title("7- What is the mean for the Riyadh region?")
+Riyadh_row = df[df["Region"] == "Riyadh region"]
+
+# Compute mean of inspection columns
+Riyadh_mean = Riyadh_row.filter(like="inspection").mean()
 st.dataframe(Riyadh_mean.to_frame("Mean Value"), use_container_width=True)
 #-------------------------------------------------
 st.markdown("""
