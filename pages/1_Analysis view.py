@@ -78,7 +78,7 @@ st.markdown("""
 <hr style="border: 2px solid #0a5c2d;">
 """, unsafe_allow_html=True)
 #-------------------------------------------------
-st.title("5- What was the growth rate in 2022 compared to the previous year?")
+st.title("5- What was the growth rate in 2020 compared to the previous year?")
 growth_2020 = ((df["2020_inspection"] - df["2019_inspection"]) / df["2019_inspection"]) * 100
 growth_2020.index = df["Region"]
 
