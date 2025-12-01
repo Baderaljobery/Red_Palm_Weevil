@@ -49,24 +49,3 @@ st.markdown("""
 <b>🔎 Please click on the (Analysis View) box on the left to view the analysis..</b>
 </div>
 """, unsafe_allow_html=True)
-
-
-
-st.markdown("""
-<style>
-/* تغيير لون الخلفية الأساسية */
-[data-testid="stAppViewContainer"] {
-    background-color: #f5efe6;
-}
-
-/* تغيير خلفية الشريط العلوي */
-[data-testid="stHeader"] {
-    background-color: rgba(0,0,0,0);
-}
-
-/* تغيير خلفية الشريط الجانبي */
-[data-testid="stSidebar"] {
-    background-color: #faf4e6;
-}
-</style>
-""", unsafe_allow_html=True)
