@@ -157,3 +157,26 @@ ax.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
 plt.tight_layout()
 
 st.pyplot(fig)
+
+
+
+
+
+st.markdown("""
+<style>
+/* تغيير لون الخلفية الأساسية */
+[data-testid="stAppViewContainer"] {
+    background-color: #f5efe6;
+}
+
+/* تغيير خلفية الشريط العلوي */
+[data-testid="stHeader"] {
+    background-color: rgba(0,0,0,0);
+}
+
+/* تغيير خلفية الشريط الجانبي */
+[data-testid="stSidebar"] {
+    background-color: #faf4e6;
+}
+</style>
+""", unsafe_allow_html=True)
